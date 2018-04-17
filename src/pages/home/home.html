@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      App Photo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div align="center" style="border: 1px solid lightgrey; padding-bottom: 10px">
+    <h2 style="padding-top: 20px; padding-bottom: 10px">Ajouter une photo</h2>
+    <ion-row>
+      <ion-col col-12>
+
+        <ion-row>
+          <button ion-button color="primary" outline block (tap)="getAppPicture()">
+            <ion-icon name="camera" item-start style="padding-right: 5px"></ion-icon>
+            Prendre une photo
+          </button>
+        </ion-row>
+
+        <ion-row>
+          <button ion-button color="dark" outline block (tap)="getGalPicture()">
+            <ion-icon name="image" item-start style="padding-right: 5px"></ion-icon>
+            Récupérer depuis la Gallery
+          </button>
+        </ion-row>
+        <hr>
+        <img class="img-thm" [src]="imageURI"/>
+        <hr>
+
+        <ion-row>
+          <button ion-button block color="secondary" (tap)="uploadImage()">
+            Enregistrer
+          </button>
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </div>
+</ion-content>
